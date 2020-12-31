@@ -31,7 +31,7 @@ function redirect($url) {
 }
 
 function getGeolocation($ip, $token) {
-	$ch = curl_init("https://ipinfo.io/$ip?token=$token");
+    $ch = curl_init("https://ipinfo.io/$ip?token=$token");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HEADER, 0);
     $data = curl_exec($ch);
